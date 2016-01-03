@@ -1,0 +1,114 @@
+<html>
+<head>
+    <link href="http://d2v52k3cl9vedd.cloudfront.net/basscss/7.0.4/basscss.min.css" rel="stylesheet">
+    <style>
+        .printer { float: left;}
+        .printer img { width: 250px; }
+        .bg { background-color: #eee; }
+        h1, h2 { margin-right: 3em; }
+    </style>
+</head>
+<body>
+
+<div class="container px2 sm-px3">
+    <div class="clearfix">
+        <h1 class="center">3D Printer Certification Class</h1>
+        <h2 class="center">Make Salt Lake</h2>
+
+        <div class="col col-12">
+            <h2>Overview</h2>
+            <ol>
+            <li>The Delta Orion (our printer)</li>
+            <li>3 stages of digital processing</li>
+            <li>Safety and damage avoidance</li>
+            <li>Plastics (ABS, PLA) and how to switch types &amp; colors</li>
+            <li>Our printer configuration files: where to get them, how to use them</li>
+            <li>Printing from an SD card</li>
+            <li>Common mistakes and how to recognize what went wrong with a print</li>
+            </ol>
+        </div>
+
+        <div id="orion" class="col col-12">
+            <h2>The Delta Orion (our printer)</h2>
+        </div>
+        <div class="col col-6">
+            <img src="orion.jpg">
+            <p>This is <a href="http://www.seemecnc.com/products/orion-delta-3d-printer">our printer (http://www.seemecnc.com/products/orion-delta-3d-printer)</a>: the SeeMeCNC Orion Delta.</p>
+        </div>
+        <div class="col col-6">
+            <p><b>SeeMeCNC Orion Delta</b> Features:
+                <ul>
+                    <li>6" diameter and 9" tall build volume</li>
+                    <li>Prints from an SD Card (no need to keep your laptop plugged in to it while it prints)</li>
+                    <li>Has a 0.5mm nozzle</li>
+                    <li>Has a heated bed (so you can print in ABS plastic in addition to PLA)</li>
+                </ul>
+            </p>
+        </div>
+
+        <div class="col col-12"></div>
+
+        <div id="3stages" class="col col-6">
+            <h2>The 3 stages of digital processing</h2>
+            <ol>
+            <li>Modeling
+                <ul>
+                    <li><a href="http://www.openscad.org/">OpenSCAD (http://www.openscad.org/)</a></li>
+                    <li><a href="http://moi3d.com/">Moment of Inspiration 3D (http://moi3d.com/)</a></li>
+                </ul>
+            </li>
+            <li>Slicing
+                <ul>
+                    <li><a href="http://slic3r.org/">Slic3r (http://slic3r.org/)</a></li>
+                </ul>
+            </li>
+            <li>G-Code</li>
+            </ol>
+        </div>
+
+        <div id="safety" class="col col-6">
+            <h2>Safety and damage avoidance</h2>
+            <ul>
+                <li>Some G-Codes can smash the glass</li>
+                <li>If something breaks, email the Make Salt Lake Google group (http://bit.ly/makeslc)</li>
+            </ul>
+        </div>
+
+        <div class="col col-12"></div>
+
+        <div id="plastics" class="col col-6">
+            <h2>Plastics (ABS, PLA) and how to switch types &amp; colors</h2>
+            <p>See this <a href="http://www.absplastic.eu/pla-vs-abs-plastic-pros-cons/">Comparison Chart (http://www.absplastic.eu/pla-vs-abs-plastic-pros-cons/)</a></p>
+            <ul>
+                <li>PLA: pleasant smell, made from corn, shiny, a little less sturdy than ABS</li>
+                <li>ABS: smelly, made from oil, higher melting point, requires heated build surface, longer lifespan</li>
+            </ul>
+        </div>
+
+        <div id="config" class="col col-6">
+            <h2>Our printer configuration files: where to get them, how to use them</h2>
+            <ul>
+                <li>See <a href="https://makesaltlake.org/tools/#rescue-tab-3d-printers">Videos and Useful Links from our local Jesse Gomez (https://makesaltlake.org/tools/#rescue-tab-3d-printers)</a></li>
+                <li>See <a href="https://github.com/luxnovalabs/orion-printer-settings">slic3r settings (https://github.com/luxnovalabs/orion-printer-settings)</a></li>
+            </ul>
+        </div>
+
+        <div class="col col-12"></div>
+
+        <div id="sdcard" class="col col-6">
+            <h2>Printing from an SD card</h2>
+            <ul>
+                <li>Copy files to your own folder on the public use SD Card(s)</li>
+            </ul>
+        </div>
+
+        <div id="mistakes" class="col col-6">
+            <h2>Common mistakes and how to recognize what went wrong with a print</h2>
+            <ul>
+                <li>See the RepRap wiki's <a href="http://reprap.org/wiki/Print_Troubleshooting_Pictorial_Guide">Troubleshooting Guide (http://reprap.org/wiki/Print_Troubleshooting_Pictorial_Guide)</a></li>
+                <li>See also Extreme Cases (just for fun): <a href="http://twistedsifter.com/2013/08/when-3d-printing-goes-wrong/">http://twistedsifter.com/2013/08/when-3d-printing-goes-wrong/</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
