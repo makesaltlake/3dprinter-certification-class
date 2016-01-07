@@ -15,16 +15,17 @@
         <h1 class="center">3D Printer Certification Class</h1>
         <h2 class="center">Make Salt Lake</h2>
 
-        <div class="col col-12">
+        <div class="col col-12" style="border-bottom: 2px solid #999; padding-bottom: 1em; margin-bottom: 2em">
             <h2>Overview</h2>
             <ol>
-            <li>The Delta Orion (our printer)</li>
-            <li>3 stages of digital processing</li>
-            <li>Safety and damage avoidance</li>
-            <li>Plastics (ABS, PLA) and how to switch types &amp; colors</li>
-            <li>Our printer configuration files: where to get them, how to use them</li>
-            <li>Printing from an SD card</li>
-            <li>Common mistakes and how to recognize what went wrong with a print</li>
+            <li><a href="#orion">The Delta Orion (our printer)</a></li>
+            <li><a href="#3stages">3 stages of digital processing</a></li>
+            <li><a href="#safety">Safety and damage avoidance</a></li>
+            <li><a href="#plastics">Plastics (ABS, PLA) and how to switch types &amp; colors</a></li>
+            <li><a href="#config">Our printer configuration files: where to get them, how to use them</a></li>
+            <li><a href="#sdcard">Printing from an SD card</a></li>
+            <li><a href="#mistakes">Common mistakes and how to recognize what went wrong with a print</a></li>
+            <li><a href="#quickstart">Quickstart: Steps to 3D Print Something</a></li>
             </ol>
         </div>
 
@@ -40,74 +41,112 @@
                 <ul>
                     <li>6" diameter and 9" tall build volume</li>
                     <li>Prints from an SD Card (no need to keep your laptop plugged in to it while it prints)</li>
-                    <li>Has a 0.5mm nozzle</li>
-                    <li>Has a heated bed (so you can print in ABS plastic in addition to PLA)</li>
+                    <li>Hot end has a 0.5mm nozzle</li>
+                    <li>Heated bed (so you can print in ABS plastic in addition to PLA)</li>
                 </ul>
             </p>
         </div>
 
         <div class="col col-12"></div>
 
-        <div id="3stages" class="col col-6">
-            <h2>The 3 stages of digital processing</h2>
-            <ol>
-            <li>Modeling
+        <div class="col col-6">
+            <div id="3stages" class="row">
+                <h2>The 3 stages of digital processing</h2>
+                <ol>
+                <li>Modeling
+                    <ul>
+                        <li><a href="http://www.openscad.org/">OpenSCAD (http://www.openscad.org/)</a></li>
+                        <li><a href="http://moi3d.com/">Moment of Inspiration 3D (http://moi3d.com/)</a></li>
+                    </ul>
+                </li>
+                <li>Slicing
+                    <ul>
+                        <li><a href="http://slic3r.org/">Slic3r (http://slic3r.org/)</a></li>
+                    </ul>
+                </li>
+                <li>G-Code</li>
+                </ol>
+            </div>
+
+            <div id="safety" class="row">
+                <h2>Safety and damage avoidance</h2>
                 <ul>
-                    <li><a href="http://www.openscad.org/">OpenSCAD (http://www.openscad.org/)</a></li>
-                    <li><a href="http://moi3d.com/">Moment of Inspiration 3D (http://moi3d.com/)</a></li>
+                    <li>Some G-Codes can smash the glass</li>
+                    <li>If something breaks, email the Make Salt Lake Google group (http://bit.ly/makeslc)</li>
                 </ul>
-            </li>
-            <li>Slicing
+            </div>
+
+            <div id="mistakes" class="row">
+                <h2>Common mistakes and how to recognize what went wrong with a print</h2>
                 <ul>
-                    <li><a href="http://slic3r.org/">Slic3r (http://slic3r.org/)</a></li>
+                    <li>See the RepRap wiki's <a href="http://reprap.org/wiki/Print_Troubleshooting_Pictorial_Guide">Troubleshooting Guide (http://reprap.org/wiki/Print_Troubleshooting_Pictorial_Guide)</a></li>
+                    <li>See also Extreme Cases (just for fun): <a href="http://twistedsifter.com/2013/08/when-3d-printing-goes-wrong/">http://twistedsifter.com/2013/08/when-3d-printing-goes-wrong/</a></li>
                 </ul>
-            </li>
-            <li>G-Code</li>
-            </ol>
+            </div>
+
+            <div id="sdcard" class="row">
+                <h2>Printing from an SD card</h2>
+                <p>Having an SD Card on the 3D printer means you won't need to connect your computer all the while the 3D printer does its thing.</p>
+                <ul>
+                    <li>Copy files to your own folder on the public use SD Card(s)</li>
+                    <li>Insert the SD Card with the front of the card facing <b>away</b> from you</li>
+                    <li>Using the panel knob, select the folder &amp; file you'd like to print</li>
+                </ul>
+            </div>
         </div>
 
-        <div id="safety" class="col col-6">
-            <h2>Safety and damage avoidance</h2>
-            <ul>
-                <li>Some G-Codes can smash the glass</li>
-                <li>If something breaks, email the Make Salt Lake Google group (http://bit.ly/makeslc)</li>
-            </ul>
+        <div class="col col-6">
+            <div id="plastics" class="row">
+                <h2>Plastics (ABS, PLA) and how to switch types &amp; colors</h2>
+                <p>See this <a href="http://www.absplastic.eu/pla-vs-abs-plastic-pros-cons/">Comparison Chart (http://www.absplastic.eu/pla-vs-abs-plastic-pros-cons/)</a></p>
+                <ul>
+                    <li>PLA: pleasant smell, made from corn, shiny, a little less sturdy than ABS</li>
+                    <li>ABS: smelly, made from oil, higher melting point, requires heated build surface, longer lifespan</li>
+                </ul>
+                <h3>Switching Filament</h3>
+                <ol>
+                    <li>Pre-heat the hot end to ~200&deg; Celsius:<br/>
+                        <img src="orion-delta-preheat.jpg" width="300">
+                    </li>
+                    <li>Back out the current filament using the filament knob at the base of the Orion Delta</li>
+                    <li>Once the filament is out, get the end of the new filament ready to insert in to the bowden tube</li>
+                    <li>Press and hold the filament release lever as you feed the new filament in</li>
+                    <li>Manually turn the filament knob at the base of the Orion delta to push the new filament in and keep going until the new color pushes out the old color and the new color shows up as a thin extruded string out of the hot end</li>
+                </ol>
+            </div>
+
+            <div id="config" class="row">
+                <h2>Our printer configuration files: where to get them, how to use them</h2>
+                <ul>
+                    <li>See <a href="https://makesaltlake.org/tools/#rescue-tab-3d-printers">Videos and Useful Links from our local Jesse Gomez (https://makesaltlake.org/tools/#rescue-tab-3d-printers)</a></li>
+                    <li>See <a href="https://github.com/luxnovalabs/orion-printer-settings">slic3r settings (https://github.com/luxnovalabs/orion-printer-settings)</a></li>
+                </ul>
+            </div>
         </div>
 
-        <div class="col col-12"></div>
 
-        <div id="plastics" class="col col-6">
-            <h2>Plastics (ABS, PLA) and how to switch types &amp; colors</h2>
-            <p>See this <a href="http://www.absplastic.eu/pla-vs-abs-plastic-pros-cons/">Comparison Chart (http://www.absplastic.eu/pla-vs-abs-plastic-pros-cons/)</a></p>
-            <ul>
-                <li>PLA: pleasant smell, made from corn, shiny, a little less sturdy than ABS</li>
-                <li>ABS: smelly, made from oil, higher melting point, requires heated build surface, longer lifespan</li>
-            </ul>
-        </div>
-
-        <div id="config" class="col col-6">
-            <h2>Our printer configuration files: where to get them, how to use them</h2>
-            <ul>
-                <li>See <a href="https://makesaltlake.org/tools/#rescue-tab-3d-printers">Videos and Useful Links from our local Jesse Gomez (https://makesaltlake.org/tools/#rescue-tab-3d-printers)</a></li>
-                <li>See <a href="https://github.com/luxnovalabs/orion-printer-settings">slic3r settings (https://github.com/luxnovalabs/orion-printer-settings)</a></li>
-            </ul>
-        </div>
-
-        <div class="col col-12"></div>
-
-        <div id="sdcard" class="col col-6">
-            <h2>Printing from an SD card</h2>
-            <ul>
-                <li>Copy files to your own folder on the public use SD Card(s)</li>
-            </ul>
-        </div>
-
-        <div id="mistakes" class="col col-6">
-            <h2>Common mistakes and how to recognize what went wrong with a print</h2>
-            <ul>
-                <li>See the RepRap wiki's <a href="http://reprap.org/wiki/Print_Troubleshooting_Pictorial_Guide">Troubleshooting Guide (http://reprap.org/wiki/Print_Troubleshooting_Pictorial_Guide)</a></li>
-                <li>See also Extreme Cases (just for fun): <a href="http://twistedsifter.com/2013/08/when-3d-printing-goes-wrong/">http://twistedsifter.com/2013/08/when-3d-printing-goes-wrong/</a></li>
-            </ul>
+        <div class="col col-12">
+            <div class="row">
+                <h2>Quickstart: Steps to 3D Print Something</h2>
+                <ol>
+                    <li>Create a 3D model (see <a href="#3stages">3 Stages</a> for software suggestions) and export it as an STL file (e.g. <em>mypart.stl</em>)</li>
+                    <li>Open Slic3r and load your part onto the plater by clicking "Add..." or dragging the STL file to Slic3r:
+                        <br/>
+                        <img src="slic3r-add.png" width="800">
+                    </li>
+                    <li>Using the <em>Print Settings</em> drop-down, choose the speed/quality of your print</li>
+                    <li>Using the <em>Filament</em> drop-down, choose the type of plastic (PLA or ABS) that you'll be using for this print</li>
+                    <li>(the <em>Printer</em> drop-down menu should always be "Orion Round Bed Settings")</li>
+                    <li>Select "Export G-code" and save the gcode file to the SD Card (in your own folder)</li>
+                    <li>Turn on the Orion Delta 3D Printer</li>
+                    <li>[Optional] Switch filament type and/or color (see <a href="#plastics">Plastics</a> for directions)</li>
+                    <li>Insert the SD Card (see <a href="#sdcard">SD Card</a> for instructions) into the Orion Delta</li>
+                    <li>Select your file, and it will print (it may take some time to warm up--you can watch the temperature rise to the target temperature on the status panel)</li>
+                </ol>
+            </div>
+            <div class="row" style="border-top: 2px solid #999; padding-top: 1em; margin-top: 2em">
+                (c) 2016 Duane Johnson. CCBY License (Creative Commons Attribution required). The most recent version of this document can be found at: <a href="http://makesaltlake.github.io/3dprinter-certification-class">http://makesaltlake.github.io/3dprinter-certification-class</a>
+            </div>
         </div>
     </div>
 </div>
