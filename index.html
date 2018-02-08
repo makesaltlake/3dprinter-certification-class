@@ -2,39 +2,53 @@
 <head>
     <link href="http://d2v52k3cl9vedd.cloudfront.net/basscss/7.0.4/basscss.min.css" rel="stylesheet">
     <style>
+        div { word-wrap: break-word; }
         .printer { float: left;}
         .printer img { width: 250px; }
         .bg { background-color: #eee; }
         h1, h2 { margin-right: 3em; }
+        div.page {
+          page-break-after: always;
+          page-break-inside: avoid;
+        }
+        .copyright {
+            border-top: 2px solid #999;
+            padding-top: 1em;
+            margin-top: 2em;
+            font-size: 80%;
+        }
     </style>
 </head>
 <body>
 
 <div class="container px2 sm-px3">
     <div class="clearfix">
-        <h1 class="center">3D Printer Certification Class</h1>
-        <h2 class="center">Make Salt Lake</h2>
+        <div class="page">
+            <h1 class="center">3D Printer Certification Class</h1>
+            <h2 class="center">Make Salt Lake</h2>
 
-        <div class="col col-12" style="border-bottom: 2px solid #999; padding-bottom: 1em; margin-bottom: 2em">
-            <h2>Overview</h2>
-            <ol>
-            <li><a href="#orion">The Delta Orion (our printer)</a></li>
-            <li><a href="#3stages">3 stages of digital processing</a></li>
-            <li><a href="#safety">Safety and damage avoidance</a></li>
-            <li><a href="#plastics">Plastics (ABS, PLA) and how to switch types &amp; colors</a></li>
-            <li><a href="#config">Our printer configuration files: where to get them, how to use them</a></li>
-            <li><a href="#sdcard">Printing from an SD card</a></li>
-            <li><a href="#mistakes">Common mistakes and how to recognize what went wrong with a print</a></li>
-            <li><a href="#quickstart">Quickstart: Steps to 3D Print Something</a></li>
-            </ol>
+            <div class="col col-12" style="border-bottom: 2px solid #999; padding-bottom: 1em; margin-bottom: 2em">
+                <h2>Overview</h2>
+                <ol>
+                <li><a href="#orion">The Delta Orion (our printer)</a></li>
+                <li><a href="#3stages">3 stages of digital processing</a></li>
+                <li><a href="#safety">Safety and damage avoidance</a></li>
+                <li><a href="#plastics">Plastics (ABS, PLA) and how to switch types &amp; colors</a></li>
+                <li><a href="#config">Our printer configuration files: where to get them, how to use them</a></li>
+                <li><a href="#sdcard">Printing from an SD card</a></li>
+                <li><a href="#mistakes">Common mistakes and how to recognize what went wrong with a print</a></li>
+                <li><a href="#quickstart">Quickstart: Steps to 3D Print Something</a></li>
+                </ol>
+            </div>
         </div>
+
+        <div class="page"></div>
 
         <div id="orion" class="col col-12">
-            <h2>The Delta Orion (our printer)</h2>
+            <h2>The Delta Orion</h2>
         </div>
-        <div class="col col-6">
+        <div class="col col-6" align="center">
             <img src="orion.jpg">
-            <p>This is <a href="http://www.seemecnc.com/products/orion-delta-3d-printer">our printer (http://www.seemecnc.com/products/orion-delta-3d-printer)</a>: the SeeMeCNC Orion Delta.</p>
         </div>
         <div class="col col-6">
             <p><b>SeeMeCNC Orion Delta</b> Features:
@@ -45,7 +59,28 @@
                     <li>Heated bed (so you can print in ABS plastic in addition to PLA)</li>
                 </ul>
             </p>
+            <p>See <a href="http://www.seemecnc.com/products/orion-delta-3d-printer">http://www.seemecnc.com/products/orion-delta-3d-printer</a></p>
         </div>
+
+        <div id="robo3d" class="col col-12">
+            <h2>The Robo R1+</h2>
+        </div>
+        <div class="col col-6" align="center">
+            <img src="robo-3d-printer.png">
+        </div>
+        <div class="col col-6">
+            <p><b>Robo R1+</b> Features:
+                <ul>
+                    <li>10" x 9" x 8" tall build volume</li>
+                    <li>Prints from an SD Card, but laptop must be plugged in to select/start</li>
+                    <li>Hot end has a 0.4mm nozzle</li>
+                    <li>Heated bed (so you can print in ABS plastic in addition to PLA)</li>
+                </ul>
+            </p>
+            <p>See <a href="https://robo3d.com/collections/robo-3d-printers/products/r1-plus-3d-printer">(https://robo3d.com/collections/robo-3d-printers/products/r1-plus-3d-printer</a></p>
+        </div>
+    
+        <div class="page"></div>
 
         <div class="col col-12"></div>
 
@@ -83,16 +118,6 @@
                     <li>See also Extreme Cases (just for fun): <a href="http://twistedsifter.com/2013/08/when-3d-printing-goes-wrong/">http://twistedsifter.com/2013/08/when-3d-printing-goes-wrong/</a></li>
                 </ul>
             </div>
-
-            <div id="sdcard" class="row">
-                <h2>Printing from an SD card</h2>
-                <p>Having an SD Card on the 3D printer means you won't need to connect your computer all the while the 3D printer does its thing.</p>
-                <ul>
-                    <li>Copy files to your own folder on the public use SD Card(s)</li>
-                    <li>Insert the SD Card with the front of the card facing <b>away</b> from you</li>
-                    <li>Using the panel knob, select the folder &amp; file you'd like to print</li>
-                </ul>
-            </div>
         </div>
 
         <div class="col col-6">
@@ -114,7 +139,23 @@
                     <li>Manually turn the filament knob at the base of the Orion delta to push the new filament in and keep going until the new color pushes out the old color and the new color shows up as a thin extruded string out of the hot end</li>
                 </ol>
             </div>
+        </div>
 
+        <div class="page"></div>
+        <div class="col col-12"><br><br><br></div>
+
+        <div class="col col-6">
+            <div id="sdcard" class="row">
+                <h2>Printing from an SD card</h2>
+                <p>Having an SD Card on the 3D printer means you won't need to connect your computer all the while the 3D printer does its thing.</p>
+                <ul>
+                    <li>Copy files to your own folder on the public use SD Card(s)</li>
+                    <li>Insert the SD Card with the front of the card facing <b>away</b> from you</li>
+                    <li>Using the panel knob, select the folder &amp; file you'd like to print</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col col-6">
             <div id="config" class="row">
                 <h2>Our printer configuration files: where to get them, how to use them</h2>
                 <ul>
@@ -123,7 +164,6 @@
                 </ul>
             </div>
         </div>
-
 
         <div class="col col-12">
             <div class="row">
@@ -144,7 +184,7 @@
                     <li>Select your file, and it will print (it may take some time to warm up--you can watch the temperature rise to the target temperature on the status panel)</li>
                 </ol>
             </div>
-            <div class="row" style="border-top: 2px solid #999; padding-top: 1em; margin-top: 2em">
+            <div class="row copyright">
                 (c) 2016 Duane Johnson. CCBY License (Creative Commons Attribution required). The most recent version of this document can be found at: <a href="http://makesaltlake.github.io/3dprinter-certification-class">http://makesaltlake.github.io/3dprinter-certification-class</a>
             </div>
         </div>
